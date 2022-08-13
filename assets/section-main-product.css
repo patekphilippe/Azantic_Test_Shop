@@ -184,10 +184,6 @@
   justify-content: space-between;
   min-height: 30px;
 }
-.size-selector__option {
-  box-sizing: border-box;
-  margin: 15px;
-}
 
 variant-radios,
 variant-selects {

@@ -337,10 +337,10 @@
             {%- unless product.has_only_default_variant -%}
               {%- if block.settings.picker_type == 'button' -%}
                 <variant-radios class="no-js-hidden" data-section="{{ section.id }}" data-url="{{ product.url }}" {{ block.shopify_attributes }}>
-                  <!-- {%- for option in product.options_with_values -%}
+                  {%- for option in product.options_with_values -%}
                       <select class="js size-selector">
                         {%- for value in option.values -%}
-                          <option class="size-selector__option" type="radio" id="{{ section.id }}-{{ option.position }}-{{ forloop.index0 }}"
+                          <div class="size-selector__option" type="radio" id="{{ section.id }}-{{ option.position }}-{{ forloop.index0 }}"
                                 name="{{ option.name }}"
                                 value="{{ value | escape }}"
                                 form="{{ product_form_id }}"
@@ -349,11 +349,11 @@
                           <label class="size-selector__option-" for="{{ section.id }}-{{ option.position }}-{{ forloop.index0 }}">
                             {{ value }}
                           </label>
-                          </option>
+                          </div>
                         {%- endfor -%}
                       </select>
-                  {%- endfor -%} -->
-                  <p class="line-item-property__field">
+                  {%- endfor -%}
+                  <!-- <p class="line-item-property__field">
                     <label>Select size</label><br>
                     <select class="js size-selector" id="select-size" name="properties[Select size]" >
                     <option class="size-selector__option" value="S">S</option>
@@ -361,7 +361,7 @@
                     <option class="size-selector__option" value="L">L</option>
                     <option class="size-selector__option" value="XL">XL</option>
                     </select>
-                  </p>
+                  </p> -->
                   <script type="application/json">
                     {{ product.variants | json }}
                   </script>
