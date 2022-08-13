@@ -159,6 +159,13 @@
   max-width: 37rem;
   min-width: fit-content;
   border: none;
+  display: flex;
+  box-sizing: border-box;
+  padding: 15px;
+  align-content: center;
+  justify-content: space-between;
+  margin-right: 7rem;
+  border: solid 1px #000000;
 }
 
 variant-radios,
