@@ -159,6 +159,9 @@
   max-width: 37rem;
   min-width: fit-content;
   border: none;
+}
+
+.size-selector {
   display: flex;
   box-sizing: border-box;
   padding: 15px;
