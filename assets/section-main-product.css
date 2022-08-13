@@ -182,6 +182,7 @@
   padding: 15px;
   align-content: center;
   justify-content: space-between;
+  min-height: 30px;
 }
 
 variant-radios,
