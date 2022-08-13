@@ -346,8 +346,8 @@
                                 form="{{ product_form_id }}"
                                 {% if option.selected_value == value %}checked{% endif %}
                           >
-                          <div class="js size-selector__option"  for="{{ section.id }}-{{ option.position }}-{{ forloop.index0 }}">
-                            {{ value }} In stock
+                          <div class="js size-selector__option"  for="{{ section.id }}-{{ option.position }}-{{ forloop.index0 }}" style="display: flex; box-sizing: border-box; padding: 15px; align-content: center; justify-content: space-between; min-height: 30px">
+                            {{ value }} 
                           </div>
                           </option>
                         {%- endfor -%}
