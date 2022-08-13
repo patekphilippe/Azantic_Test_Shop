@@ -337,9 +337,8 @@
             {%- unless product.has_only_default_variant -%}
               {%- if block.settings.picker_type == 'button' -%}
                 <variant-radios class="no-js-hidden" data-section="{{ section.id }}" data-url="{{ product.url }}" {{ block.shopify_attributes }}>
-                  {%- for option in product.options_with_values -%}
+                  <!-- {%- for option in product.options_with_values -%}
                       <select class="js size-selector">
-
                         {%- for value in option.values -%}
                           <option class="size-selector__option" type="radio" id="{{ section.id }}-{{ option.position }}-{{ forloop.index0 }}"
                                 name="{{ option.name }}"
@@ -347,27 +346,22 @@
                                 form="{{ product_form_id }}"
                                 {% if option.selected_value == value %}checked{% endif %}
                           >
-                          <label class="size-selector__option-label" for="{{ section.id }}-{{ option.position }}-{{ forloop.index0 }}">
+                          <label class="size-selector__option-" for="{{ section.id }}-{{ option.position }}-{{ forloop.index0 }}">
                             {{ value }}
                           </label>
                           </option>
                         {%- endfor -%}
-
-                        <!-- <legend class="form__label">{{ option.name }}</legend> -->
-                        <!-- {%- for value in option.values -%}
-                          <input type="radio" id="{{ section.id }}-{{ option.position }}-{{ forloop.index0 }}"
-                                name="{{ option.name }}"
-                                value="{{ value | escape }}"
-                                form="{{ product_form_id }}"
-                                {% if option.selected_value == value %}checked{% endif %}
-                          >
-                          <label for="{{ section.id }}-{{ option.position }}-{{ forloop.index0 }}">
-                            {{ value }}
-                          </label>
-                        {%- endfor -%} -->
-
                       </select>
-                  {%- endfor -%}
+                  {%- endfor -%} -->
+                  <p class="line-item-property__field">
+                    <label>Select size</label><br>
+                    <select id="select-size" name="properties[Select size]">
+                    <option value="S">S</option>
+                    <option value="M">M</option>
+                    <option value="L">L</option>
+                    <option value="XL">XL</option>
+                    </select>
+                  </p>
                   <script type="application/json">
                     {{ product.variants | json }}
                   </script>
