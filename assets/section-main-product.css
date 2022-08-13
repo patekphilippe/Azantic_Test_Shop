@@ -169,11 +169,19 @@
   justify-content: space-between;
   margin-right: 7rem;
   border: solid 1px #000000;
-  min-width: 44rem;
+  min-width: 100%;
 }
 
 .size-selector:focus-visible {
   border: 0;
+}
+
+.size-selector__option {
+  display: flex;
+  box-sizing: border-box;
+  padding: 15px;
+  align-content: center;
+  justify-content: space-between;
 }
 
 variant-radios,
