@@ -169,6 +169,7 @@
   justify-content: space-between;
   margin-right: 7rem;
   border: solid 1px #000000;
+  min-width: 44rem;
 }
 
 .size-selector:focus-visible {
