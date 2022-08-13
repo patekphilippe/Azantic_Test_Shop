@@ -346,22 +346,14 @@
                                 form="{{ product_form_id }}"
                                 {% if option.selected_value == value %}checked{% endif %}
                           >
-                          <div class="size-selector__option-" for="{{ section.id }}-{{ option.position }}-{{ forloop.index0 }}">
+                          
+                          </option>
+                          <div  for="{{ section.id }}-{{ option.position }}-{{ forloop.index0 }}">
                             {{ value }}
                           </div>
-                          </option>
                         {%- endfor -%}
                       </select>
                   {%- endfor -%}
-                  <!-- <p class="line-item-property__field">
-                    <label>Select size</label><br>
-                    <select class="js size-selector" id="select-size" name="properties[Select size]" >
-                    <option class="size-selector__option" value="S">S</option>
-                    <option class="size-selector__option" value="M">M</option>
-                    <option class="size-selector__option" value="L">L</option>
-                    <option class="size-selector__option" value="XL">XL</option>
-                    </select>
-                  </p> -->
                   <script type="application/json">
                     {{ product.variants | json }}
                   </script>
