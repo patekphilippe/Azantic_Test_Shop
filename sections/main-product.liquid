@@ -341,13 +341,13 @@
                       <select class="js size-selector">
 
                         {%- for value in option.values -%}
-                          <option  type="radio" id="{{ section.id }}-{{ option.position }}-{{ forloop.index0 }}"
+                          <option class="size-selector__option" type="radio" id="{{ section.id }}-{{ option.position }}-{{ forloop.index0 }}"
                                 name="{{ option.name }}"
                                 value="{{ value | escape }}"
                                 form="{{ product_form_id }}"
                                 {% if option.selected_value == value %}checked{% endif %}
                           >
-                          <label class="size-selector__option" for="{{ section.id }}-{{ option.position }}-{{ forloop.index0 }}">
+                          <label class="size-selector__option-label" for="{{ section.id }}-{{ option.position }}-{{ forloop.index0 }}">
                             {{ value }}
                           </label>
                           </option>
