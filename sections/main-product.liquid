@@ -340,7 +340,8 @@
                   {%- for option in product.options_with_values -%}
                       <select class="js size-selector">
                         {%- for value in option.values -%}
-                          <div type="radio" id="{{ section.id }}-{{ option.position }}-{{ forloop.index0 }}"
+                        
+                          <option type="radio" id="{{ section.id }}-{{ option.position }}-{{ forloop.index0 }}"
                                 name="{{ option.name }}"
                                 value="{{ value | escape }}"
                                 form="{{ product_form_id }}"
@@ -349,7 +350,7 @@
                           <div class="js size-selector__option"  for="{{ section.id }}-{{ option.position }}-{{ forloop.index0 }}" >
                             {{ value }} 
                           </div>
-                          </div>
+                          </option>
                         {%- endfor -%}
                       </select>
                   {%- endfor -%}
