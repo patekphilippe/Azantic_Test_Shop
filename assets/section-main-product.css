@@ -171,6 +171,10 @@
   border: solid 1px #000000;
 }
 
+.size-selector:focus-visible {
+  border: 0;
+}
+
 variant-radios,
 variant-selects {
   display: block;
