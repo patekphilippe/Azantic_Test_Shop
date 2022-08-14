@@ -356,9 +356,11 @@
                         {%- endfor -%}
                     </select>
                     <div class="js size-selector">
+                      {%- for value in option.values -%}
                       <span class="js size-selector__option" for="{{ section.id }}-{{ option.position }}-{{ forloop.index0 }}" style="display: inline-block;">
                              {{ value }} 
                       </span>
+                      {%- endfor -%}
                     </div>
 
                    
