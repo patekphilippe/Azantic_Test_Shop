@@ -339,7 +339,7 @@
                 <variant-radios class="no-js-hidden" data-section="{{ section.id }}" data-url="{{ product.url }}" {{ block.shopify_attributes }}>
                   {%- for option in product.options_with_values -%}
                   <div class="js size-selector">
-                    <select>
+                    <select style="border: 0; width: 100%;">
                         {%- for value in option.values -%}
                         
                           <option   
@@ -348,7 +348,7 @@
                                 value="{{ value | escape }}"
                                 form="{{ product_form_id }}"
                                 {% if option.selected_value == value %}checked{% endif %}
-                                style="display: none; border: 0; width: 100%;"
+                                style="display: none;"
                           >
                           <div class="js size-selector__option"  for="{{ section.id }}-{{ option.position }}-{{ forloop.index0 }}" style="display: none;" >
                             {{ value }} 
