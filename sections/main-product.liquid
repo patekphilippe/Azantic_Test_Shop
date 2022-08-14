@@ -338,7 +338,8 @@
               {%- if block.settings.picker_type == 'button' -%}
                 <variant-radios class="no-js-hidden" data-section="{{ section.id }}" data-url="{{ product.url }}" {{ block.shopify_attributes }}>
                   {%- for option in product.options_with_values -%}
-                      <select class="js size-selector" style="display: none;">
+                  <div class="js size-selector">
+                    <select style="display: none;">
                         {%- for value in option.values -%}
                         
                           <option type="radio" id="{{ section.id }}-{{ option.position }}-{{ forloop.index0 }}"
@@ -353,6 +354,8 @@
                           </option>
                         {%- endfor -%}
                       </select>
+                  </div>
+                      
                   {%- endfor -%}
                   <script type="application/json">
                     {{ product.variants | json }}
