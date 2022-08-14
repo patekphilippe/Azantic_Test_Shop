@@ -348,7 +348,7 @@
                                 value="{{ value | escape }}"
                                 form="{{ product_form_id }}"
                                 {% if option.selected_value == value %}checked{% endif %}
-                                style="display: none; border: none; min-width: 100%;"
+                                style="display: none; border: 0; width: 100%;"
                           >
                           <div class="js size-selector__option"  for="{{ section.id }}-{{ option.position }}-{{ forloop.index0 }}" style="display: none;" >
                             {{ value }} 
