@@ -350,10 +350,11 @@
                                 form="{{ product_form_id }}"
                                 {% if option.selected_value == value %}checked{% endif %}
                           >
+                            <div   for="{{ section.id }}-{{ option.position }}-{{ forloop.index0 }}"  >
+                             {{ value }} 
+                            </div>
                           </option>
-                          <div   for="{{ section.id }}-{{ option.position }}-{{ forloop.index0 }}"  >
-                            {{ value }} 
-                          </div>
+                          
                         </div>
                         {%- endfor -%}
                       </select>
