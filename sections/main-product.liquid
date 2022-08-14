@@ -338,12 +338,12 @@
               {%- if block.settings.picker_type == 'button' -%}
                 <variant-radios class="no-js-hidden" data-section="{{ section.id }}" data-url="{{ product.url }}" {{ block.shopify_attributes }}>
                   {%- for option in product.options_with_values -%}
-                  <div class="js size-selector">
-                    <select style="border: 0; width: 100%;">
+                  
+                    <select class="js size-selector" style="border: 0; width: 100%;" >
                       <ul>
                         {%- for value in option.values -%}
                         <li class="js size-selector__option" {% if option.selected_value == value %}checked{% endif %}>
-                          <div   for="{{ section.id }}-{{ option.position }}-{{ forloop.index0 }}" style="display: none;" >
+                          <div   for="{{ section.id }}-{{ option.position }}-{{ forloop.index0 }}"  >
                             {{ value }} 
                           </div>
                         </li>
@@ -361,7 +361,7 @@
                       </ul>
                         
                       </select>
-                  </div>
+                  
                       
                   {%- endfor -%}
                   <script type="application/json">
