@@ -359,7 +359,9 @@
                       <ul>
                         {%- for value in option.values -%}
                         <li class="js size-selector__option">
-                          <span for="{{ section.id }}-{{ option.position }}-{{ forloop.index0 }}" style="display: inline-block;">
+                          <span for="{{ section.id }}-{{ option.position }}-{{ forloop.index0 }}" 
+                                style="display: inline-block;"
+                                {% if option.selected_value == value %}checked{% endif %}>
                              {{ value }} 
                           </span>
                         </li>
